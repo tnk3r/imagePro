@@ -1,4 +1,4 @@
-import cv2, imutils
+import cv2
 import numpy as np
 
 cap = cv2.VideoCapture(0)
@@ -8,9 +8,8 @@ angle = 0
 while(cap.isOpened()):
     ret, frame = cap.read()
     if ret == True:
-    	rotated = imutils.rotate_bound(frame, angle)
-    	cv2.imshow("Rotated (Correct)", rotated)
-        angle+=45
+    	cv2.imshow("image", frame)
+
     cv2.waitKey(5)
 
 
